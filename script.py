@@ -11,11 +11,5 @@ biceps = ['curl', 'seated curl', 'incline curl']
 abdominal = ['push crunch', 'crunch', 'jack-knife', 'reverse crunch']
 triceps = ['kickback', 'lying tricep extension', 'incline tricep extension']
 
-def randomize(lst):
-    return random.randint(1, len(lst)-1)
 
-exercise1 = randomize(back)
-
-
-print(exercise1)
 
