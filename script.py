@@ -34,17 +34,25 @@ cardio_exercise = random_exercise_generator(cardio)
 name = input("Name: ")
 date = datetime.datetime.now()
 
-print(f"Client's name: {name.title()}")
-print(f"Todays date: {date}")
-print("******* Workout Generator *******")
-print(f"Back: {back_exercise}")
-print(f"Quads: {quadriceps_exercise}")
-print(f"Chest: {chest_exercise}")
-print(f"Hams: {hamstrings_exercise}")
-print(f"Delts: {deltoid_exercise}")
-print(f"Calves: {calves_exercise}")
-print(f"Bis: {biceps_exercise}")
-print(f"Abs: {abdominal_exercise}")
-print(f"Tris: {triceps_exercise}")
-print(f"Cardio: {cardio_exercise}")
-print("**********************************")
+workout_text = []
+
+workout_text.append(f"Client's name: {name.title()}")
+workout_text.append(f"Todays date: {date}")
+workout_text.append(f"# Workout Generator")
+workout_text.append(f"Back: {back_exercise}")
+workout_text.append(f"Quads: {quadriceps_exercise}")
+workout_text.append(f"Chest: {chest_exercise}")
+workout_text.append(f"Hams: {hamstrings_exercise}")
+workout_text.append(f"Delts: {deltoid_exercise}")
+workout_text.append(f"Calves: {calves_exercise}")
+workout_text.append(f"Bis: {biceps_exercise}")
+workout_text.append(f"Abs: {abdominal_exercise}")
+workout_text.append(f"Tris: {triceps_exercise}")
+workout_text.append(f"Cardio: {cardio_exercise}")
+workout_text.append(f"**********************************")
+
+with open("workout.md", 'w') as f:
+    for text in workout_text:
+        f.write("%s\n" % text)
+
+
